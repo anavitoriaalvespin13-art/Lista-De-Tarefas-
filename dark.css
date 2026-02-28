@@ -1,0 +1,64 @@
+body.dark{
+    background: #000000;
+}
+
+.background::after {
+    background: radial-gradient(
+    circle, /*Cria os circulos*/
+    rgba(191, 88, 247, 0.075) 100%, /*Tamnho da bola*/
+    transparent 40%
+    );
+}
+
+.dark .escrever{
+    background: rgba(0, 0, 0, 0.598);
+    box-shadow:none;
+   
+
+    input{
+        color: #df75ff;
+        background: #31123f;
+        border-color: #ac44cf8f;
+        box-shadow: none;
+    }
+}
+
+.dark .criar{
+    background: #31123f;
+    border-color: hwb(281 33% 0% / 0.735);
+
+    span{
+        color: #df75ff;
+    }
+}
+
+.dark .modos{
+    background: #660c7c33;
+    border: 1px solid hwb(281 33% 0% / 0.735);
+    justify-content:start ;
+}
+
+.dark .claro{
+    background: #9511be9d;
+    border-color: #a53ec4a4;
+}
+
+.dark .lista{
+    background: rgba(0, 0, 0, 0.445);
+    box-shadow:0 1px 20px hwb(281 0% 0%);
+}
+
+.dark li{
+     color: hwb(281 63% 0%);
+     background: #31123f82;
+     box-shadow: none;
+     
+
+}
+.dark li:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 -20px 20px #00000059;
+    border-top: 1px solid #c300ff;
+}
+
+

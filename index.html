@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Minha lista</title>
+    <script defer src="script.js" ></script>
+</head>
+<body>
+
+    <div class="background"></div>
+   
+    <h1>Lista de tarefas</h1>
+   <div class="caixa">
+    <div class="escrever">
+       <div class="modos">
+        <button class="claro" onclick="mudarFundo()"></button>
+       </div>
+       <div class="pesquisar">
+        <input type="text" id="escrever">
+        <button class="criar" onclick="criarTarefa()"><span>+</span></button>
+    </div>
+</div>
+
+    <div class="lista">
+        <ul>
+        </ul>
+    </div>
+   </div>
+    
+</body>
+</html>

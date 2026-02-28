@@ -1,0 +1,242 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: #ffffff;
+    position: relative;
+    text-align: center;
+}
+
+/* Camada do efeito roxo */
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Mancha roxa grande */
+.background::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, 
+        rgba(170, 23, 255, 0.363) 0%, 
+        rgba(186, 68, 255, 0.082) 30%, 
+        rgba(174, 42, 250, 0.356) 60%, 
+        transparent 80%
+    );
+    bottom: -150px;
+    right: -160px;
+    filter: blur(80px);
+}
+
+/* Glow suave lateral */
+.background::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+
+    background: radial-gradient(
+    circle, /*Cria os circulos*/
+    rgba(191, 88, 247, 0.208) 100%, /*Tamnho da bola*/
+    transparent 40%
+    );
+
+    top: -100px;
+    left: -100px;
+    filter: blur(60px);
+}
+
+.background::before,::after{
+    animation: mover 5s ease-in-out infinite alternate;
+}
+
+@keyframes mover {
+    from { transform: translate(0, 0); }
+    to { transform: translate(60px, -90px); }
+}
+
+
+
+
+/*======================================*/
+
+/*========CAIXA DE PESQUISA===============*/
+
+/*======================================*/
+
+h1{ 
+    padding-top: 15px;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: rgb(193, 60, 220);
+    font-family:cursive;
+}
+
+.caixa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+   
+}
+
+.escrever{
+    background: rgba(255, 255, 255, 0.317);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+    max-width: 600px;
+    min-width: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #d883ff2d;
+    backdrop-filter: blur(4px);
+    box-shadow:0 1px 30px #c856fc85;
+}
+
+.modos{
+ padding:0 5px;
+ display: flex;
+ align-items: center;
+ justify-content: end;
+ background: #e07cff69 ;
+ width: 100px;
+ border-radius: 30px;
+ border: 1px solid #dc7df9;
+ box-shadow: 0 2px 3px #a748c400;
+}
+
+.claro{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background: #faebff;
+    border-color: #d65bfb;
+    box-shadow: -2px 1px #a748c421;
+}
+
+
+
+.pesquisar{
+    display: flex;
+    width: 90%;
+}
+
+.pesquisar input{
+    border-radius: 10px 0px 0px 10px;
+    width: 100%;
+    min-width: 40px;
+    padding: 10px;
+    color: #512e5c;
+    border: 1px solid #dc7df9;;
+    outline: none;
+    box-shadow: -3px 2px 10px #720c923a;
+}
+
+
+.criar{
+    min-width: 30px;
+    width: 50px;
+    padding: 5px;
+    border-radius: 0 10px 10px 0;
+    background: #ebaffd3f;
+    border: 1px solid rgba(225, 73, 255, 0.495);
+    color: #a43ec4;
+}
+
+.criar span{
+   color: #a43ec4;
+   font-size: 1.5rem;
+}
+
+/*======================================*/
+
+/*=============LISTA====================*/
+
+/*======================================*/
+
+.lista{
+    min-height:500px ;
+    width: 90%; /*ocupe toda a largura ta dela*/
+    max-width: 600px;/*mais o seu tamanho maximo é de 600px*/
+    min-width: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #d883ff2d;
+    backdrop-filter: blur(4px); 
+    box-shadow:0 1px 30px #c856fc85;
+    background: #ffffff1e;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+li{ 
+    font-size:1.5rem;
+    text-align: center;
+    list-style: none;
+    padding: 10px;
+    text-align: justify;
+    border:1px solid #c300ff1e; 
+    border-radius: 10px;
+    color: #9b369bc5;
+    background: #fffeff80;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s ease;
+    box-shadow: 0 1px 10px #a62ccb50;
+
+    flex: 1;                 /* ocupa o espaço disponível */
+    min-width: 0;            /* 🔥 MUITO IMPORTANTE */
+}
+
+li:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 5px #a62ccb50;
+    
+}
+
+.tarefas_icones{
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  flex: 1;                 /* ocupa o espaço disponível */
+  min-width: 0;            /* 🔥 MUITO IMPORTANTE */
+}
+
+
+.tarefas_icones input{
+    border-radius: 10px 0px 0px 10px;
+    padding: 5px;
+    color: #512e5c33;
+    border: 1px solid #dc7df970;;
+    box-shadow: -3px 2px 10px #720c923a;
+    border-radius: 50px;
+    appearance: none; /*Desativa as configurações padrao do navegador */
+}
+
+.tarefas_icones input:checked{
+    background: #ebaaffe9;
+}
+
+span i{
+     color: #8313a5a5;
+     flex-shrink: 0;          /* impede a lixeira de encolher */
+     cursor: pointer;
+     padding-left:20px ;
+     font-size: 15px;
+}
