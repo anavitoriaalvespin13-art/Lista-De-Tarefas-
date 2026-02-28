@@ -167,7 +167,7 @@ h1{
 /*======================================*/
 
 .lista{
-    min-height:500px ;
+    min-height: 60vh;
     width: 90%; /*ocupe toda a largura ta dela*/
     max-width: 600px;/*mais o seu tamanho maximo é de 600px*/
     min-width: 40px;
